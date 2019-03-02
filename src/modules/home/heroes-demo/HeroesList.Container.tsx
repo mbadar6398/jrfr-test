@@ -33,14 +33,16 @@ const HeroesListContainer: React.FC<Props> = ({
   index,
   data,
   fetch
-}) => (
-  <HeroesList
-    loading={loading}
-    index={index}
-    data={data}
-    fetchRequest={fetch}
-  />
-);
+}) => {
+  return (
+    <HeroesList
+      loading={loading}
+      index={index}
+      data={data}
+      fetchRequest={fetch}
+    />
+  );
+};
 
 const mapStateToProps = ({ heroes }: RootStore) => {
   return {
